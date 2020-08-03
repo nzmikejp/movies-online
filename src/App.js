@@ -1,13 +1,48 @@
-import React, { Component } from 'react';
-import './assets/css/app.css';
+import React, { Component } from 'react'
+import NewMovie from './NewMovie'
+import NewMovieForm from './NewMovieForm'
+import './assets/css/app.css'
 
 class App extends Component {
   constructor(props){
     super(props)
 
     this.state = {
-
+      movies: [
+        {
+          id: 1,
+          title: 'Unhinged',
+          description: "Unhinged is a psychological thriller that takes something we've all experienced - road rage - to an unpredictable and terrifying conclusion.",
+          release: '30/07/2020',
+          time: '90 min',
+          rating: 'R16'
+        }
+      ]
     }
+  }
+
+  addMovie = (data) => {
+    var newMovie = {
+      id: Date.now(),
+      ...data
+    }
+
+    var newMovieList = [newMovie, ...this.state.movies]
+
+    this.setState({
+      movies: newMovieList
+    })
+  }
+
+  removeMovie = (id) => {
+    var movies = this.state.movies
+    var filtered = movies.filter((item)=> {
+      return item.id != id
+    })
+
+    this.setState({
+      movies: filtered
+    })
   }
 
   render(){
@@ -21,83 +56,25 @@ class App extends Component {
             <div className="main-content-wrap col-md-7 col-lg-9">
               <div className="content">
                 <div className="movie-cat">
-                  <div className="movie-item">
-                      <div className="item-btns">
-                        <i className="fas fa-edit edit"></i>
-                        <i className="fas fa-trash-alt trash"></i>
-                      </div>
-                    <img className="movie-image" src="images/largeposter.jpg" alt=""/>
-                    <div className="movie-content-wrap">
-                      <h1 className="movie-title">
-                        Unhinged
-                      </h1>
-                      <p className="movie-bio">
-                        Unhinged is a psychological thriller that takes something we've all experienced - road rage - to an unpredictable and terrifying conclusion.
-                      </p>
-                      <p className="movie-release-date"><span>Release Date:</span> 30/07/2020</p>
-                      <p className="movie-running-time"><span>Run Time:</span> 90 min</p>
-                      <p className="movie-rating"><span>Rating:</span> R16</p>
-                    </div>
-                  </div>
-                  <div className="movie-item">
-                      <div className="item-btns">
-                        <i className="fas fa-edit edit"></i>
-                        <i className="fas fa-trash-alt trash"></i>
-                      </div>
-                    <img className="movie-image" src="images/largeposter.jpg" alt=""/>
-                    <div className="movie-content-wrap">
-                      <h1 className="movie-title">
-                        Unhinged
-                      </h1>
-                      <p className="movie-bio">
-                        Unhinged is a psychological thriller that takes something we've all experienced - road rage - to an unpredictable and terrifying conclusion.
-                      </p>
-                      <p className="movie-release-date"><span>Release Date:</span> 30/07/2020</p>
-                      <p className="movie-running-time"><span>Run Time:</span> 90 min</p>
-                      <p className="movie-rating"><span>Rating:</span> R16</p>
-                    </div>
-                  </div>
-                  <div className="movie-item">
-                      <div className="item-btns">
-                        <i className="fas fa-edit edit"></i>
-                        <i className="fas fa-trash-alt trash"></i>
-                      </div>
-                    <img className="movie-image" src="images/largeposter.jpg" alt=""/>
-                    <div className="movie-content-wrap">
-                      <h1 className="movie-title">
-                        Unhinged
-                      </h1>
-                      <p className="movie-bio">
-                        Unhinged is a psychological thriller that takes something we've all experienced - road rage - to an unpredictable and terrifying conclusion.
-                      </p>
-                      <p className="movie-release-date"><span>Release Date:</span> 30/07/2020</p>
-                      <p className="movie-running-time"><span>Run Time:</span> 90 min</p>
-                      <p className="movie-rating"><span>Rating:</span> R16</p>
-                    </div>
-                  </div>
+                  {
+                    this.state.movies.map((movie)=>{
+
+                      var props = {
+                        key: movie.id,
+                        removeMovie: this.removeMovie,
+                        ...movie
+                      }
+                      return (
+                        <NewMovie {...props}/>
+                      )
+                    })
+                  }
                 </div>
               </div>
             </div>
             <div className="sidebar col-md-5 col-lg-3">
               <h1>Enter <span>your latest movie...</span></h1>
-              <form action="x">
-                <div className="form-group">
-                  <input type="text" id="name" name="name" placeholder="Name of movie"/>
-                </div>
-                <div className="form-group">
-                  <input type="text" id="release" name="release" placeholder="Release date"/>
-                </div>
-                <div className="form-group">
-                  <input type="text" id="runtime" name="runtime" placeholder="Runtime of movie"/>
-                </div>
-                <div className="form-group">
-                  <input type="text" id="rating" name="rating" placeholder="Rating of movie"/>
-                </div>
-                <div className="form-group">
-                  <textarea name="about" id="about" cols="30" rows="10" placeholder="Bio about movie"></textarea>
-                </div>
-                <button type="submit" className="cta">Add</button>
-              </form>
+              <NewMovieForm addMovie={this.addMovie} />
             </div>
           </div>
         </main>
@@ -106,4 +83,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App

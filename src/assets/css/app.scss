@@ -65,7 +65,7 @@ main {
 }
 
 .main-content-wrap {
-    padding: 1em;
+    padding: 1.5em;
 
     .content {
         min-height: 100%;
@@ -76,7 +76,7 @@ main {
 }
 
 .movie-cat {
-    padding: 1.8em;
+    padding: 2.2em 1.6em;
     display: flex;
     flex-wrap: wrap;
 }
@@ -85,10 +85,9 @@ main {
     background-color: rgba(0,0,0,0.2);
     padding: 1em;
     border-radius: 0.3em;
-    flex: 0 0 31%;
+    flex: 0 0 24.1em;
     display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
     border: thin $mid-color solid;
     position: relative;
 }
@@ -119,8 +118,11 @@ main {
 }
 
 .movie-image {
-    display: block;
-    max-width: 100vmin;
+    flex: 0 0 40%;
+    img {
+        display: block;
+        max-width: 100%;
+    }
 }
 
 .movie-content-wrap {
@@ -134,6 +136,10 @@ main {
 .movie-bio {
     padding-bottom: 1em;
     border-bottom: thin rgba(255,255,255,0.1) solid;
+}
+
+.movie-rating {
+    text-transform: uppercase;
 }
 
 .movie-item:not(:last-child) {
@@ -172,7 +178,7 @@ main {
 
     &::placeholder {
         opacity: 1;
-
+        color: $accent-color;
     }
 
     &:focus {
@@ -193,6 +199,10 @@ main {
     &:hover {
         background-color: $light-color;
         box-shadow: 0 0.5em 0.8em -0.5em rgba(0,0,0,0.3);
+    }
+
+    &:focus {
+        outline: none;
     }
 }
 

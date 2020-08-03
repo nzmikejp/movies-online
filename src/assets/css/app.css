@@ -48,7 +48,7 @@ main .row {
 }
 
 .main-content-wrap {
-  padding: 1em;
+  padding: 1.5em;
 }
 
 .main-content-wrap .content {
@@ -59,7 +59,7 @@ main .row {
 }
 
 .movie-cat {
-  padding: 1.8em;
+  padding: 2.2em 1.6em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,14 +72,12 @@ main .row {
   padding: 1em;
   border-radius: 0.3em;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 31%;
-          flex: 0 0 31%;
+      -ms-flex: 0 0 24.1em;
+          flex: 0 0 24.1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
   border: thin #44474e solid;
   position: relative;
 }
@@ -113,8 +111,14 @@ main .row {
 }
 
 .movie-image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
+}
+
+.movie-image img {
   display: block;
-  max-width: 100vmin;
+  max-width: 100%;
 }
 
 .movie-content-wrap {
@@ -128,6 +132,10 @@ main .row {
 .movie-bio {
   padding-bottom: 1em;
   border-bottom: thin rgba(255, 255, 255, 0.1) solid;
+}
+
+.movie-rating {
+  text-transform: uppercase;
 }
 
 .movie-item:not(:last-child) {
@@ -167,18 +175,22 @@ main .row {
 
 .form-group input::-webkit-input-placeholder, .form-group textarea::-webkit-input-placeholder {
   opacity: 1;
+  color: #61dafb;
 }
 
 .form-group input:-ms-input-placeholder, .form-group textarea:-ms-input-placeholder {
   opacity: 1;
+  color: #61dafb;
 }
 
 .form-group input::-ms-input-placeholder, .form-group textarea::-ms-input-placeholder {
   opacity: 1;
+  color: #61dafb;
 }
 
 .form-group input::placeholder, .form-group textarea::placeholder {
   opacity: 1;
+  color: #61dafb;
 }
 
 .form-group input:focus, .form-group textarea:focus {
@@ -201,5 +213,9 @@ main .row {
   background-color: #fff;
   -webkit-box-shadow: 0 0.5em 0.8em -0.5em rgba(0, 0, 0, 0.3);
           box-shadow: 0 0.5em 0.8em -0.5em rgba(0, 0, 0, 0.3);
+}
+
+.cta:focus {
+  outline: none;
 }
 /*# sourceMappingURL=app.css.map */
