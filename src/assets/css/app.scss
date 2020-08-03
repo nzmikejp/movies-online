@@ -88,7 +88,8 @@ main {
     flex: 0 0 24.1em;
     display: flex;
     margin-bottom: 1.5em;
-    border: thin $mid-color solid;
+    border: thin rgba(255,255,255,0.07) solid;
+    box-shadow: 0 1.5em 0.9em -0.8em rgba(0,0,0,0.15);
     position: relative;
 }
 
@@ -119,6 +120,9 @@ main {
 
 .movie-image {
     flex: 0 0 40%;
+    height: 207px;
+    background-color: black;
+
     img {
         display: block;
         max-width: 100%;

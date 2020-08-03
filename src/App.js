@@ -49,7 +49,9 @@ class App extends Component {
     return (
       <div className="wrap">
         <header>
-          <div className="container-fluid"></div>
+          <div className="container-fluid">
+            <img src="./images/logo.svg" alt=""/>
+          </div>
         </header>
         <main className="container-fluid">
           <div className="row">

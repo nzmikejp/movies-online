@@ -78,7 +78,9 @@ main .row {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 1.5em;
-  border: thin #44474e solid;
+  border: thin rgba(255, 255, 255, 0.07) solid;
+  -webkit-box-shadow: 0 1.5em 0.9em -0.8em rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1.5em 0.9em -0.8em rgba(0, 0, 0, 0.15);
   position: relative;
 }
 
@@ -114,6 +116,8 @@ main .row {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 40%;
           flex: 0 0 40%;
+  height: 207px;
+  background-color: black;
 }
 
 .movie-image img {
