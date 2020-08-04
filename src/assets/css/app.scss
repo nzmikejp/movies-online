@@ -21,7 +21,7 @@
 
 $bg-color: #282c34;
 $accent-color: #61dafb;
-$light-color: #fff;
+$light-color: #f3f3f3;
 $mid-color: lighten(#2c2e33, 10%);
 
 $bg-green: #69da69;
@@ -54,20 +54,31 @@ header {
     min-height: 4em;
     background-color: $light-color;
     position: relative;
+    display: flex;
+    align-items: center;
     z-index: 50;
     box-shadow: 0 0.5em 0.5em rgba(0,0,0,0.2);
     position: relative;
 
+    & > div {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
     img {
-        position: absolute;
-        top: 0;
-        left: 3em;
         display: block;
-        width: 12em;
-        padding: 1em;
-        background-color: $accent-color;
-        border-radius: 0 0 0.5em 0.5em;
-        box-shadow: 0.5em 0.5em 0.5em rgba(0,0,0,0.2);
+        width: 9em;
+        padding-right: 1em;
+        border-right: thin rgba(0,0,0,0.2) solid;
+        filter: drop-shadow(0.3em 0.3em 0.03em $accent-color);
+    }
+
+    h3 {
+        color: $accent-color;
+        font-size: 1em;
+        margin-right: 2em;
+        padding-left: 1em;
     }
 }
 
@@ -106,6 +117,11 @@ main {
     position: relative;
 }
 
+.movie-title {
+    padding-top: 0.5em;
+    color: $accent-color;
+}
+
 .item-btns {
     display: flex;
     position: absolute;
@@ -114,11 +130,11 @@ main {
     transform: translate(10%, -50%);
 
     i {
-        width: 2.5em;
-        height: 2.5em;
+        width: 2.1em;
+        height: 2.1em;
         border-radius: 50%;
         text-align: center;
-        line-height: 2.4em;
+        line-height: 2.2em;
     }
 }
 
@@ -135,6 +151,8 @@ main {
     flex: 0 0 40%;
     height: 207px;
     background-color: black;
+    border-radius: 0.3em;
+    overflow: hidden;
 
     img {
         display: block;

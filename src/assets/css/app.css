@@ -17,13 +17,13 @@
 body {
   font-family: "gothambook", sans-serif;
   background-color: #282c34;
-  color: #fff;
+  color: #f3f3f3;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "gothambold", sans-serif;
   letter-spacing: -0.04em;
-  color: #fff;
+  color: #f3f3f3;
 }
 
 h1 {
@@ -36,25 +36,46 @@ p {
 
 header {
   min-height: 4em;
-  background-color: #fff;
+  background-color: #f3f3f3;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   z-index: 50;
   -webkit-box-shadow: 0 0.5em 0.5em rgba(0, 0, 0, 0.2);
           box-shadow: 0 0.5em 0.5em rgba(0, 0, 0, 0.2);
   position: relative;
 }
 
+header > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 header img {
-  position: absolute;
-  top: 0;
-  left: 3em;
   display: block;
-  width: 12em;
-  padding: 1em;
-  background-color: #61dafb;
-  border-radius: 0 0 0.5em 0.5em;
-  -webkit-box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.2);
-          box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.2);
+  width: 9em;
+  padding-right: 1em;
+  border-right: thin rgba(0, 0, 0, 0.2) solid;
+  -webkit-filter: drop-shadow(0.3em 0.3em 0.03em #61dafb);
+          filter: drop-shadow(0.3em 0.3em 0.03em #61dafb);
+}
+
+header h3 {
+  color: #61dafb;
+  font-size: 1em;
+  margin-right: 2em;
+  padding-left: 1em;
 }
 
 main .row {
@@ -98,6 +119,11 @@ main .row {
   position: relative;
 }
 
+.movie-title {
+  padding-top: 0.5em;
+  color: #61dafb;
+}
+
 .item-btns {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -110,11 +136,11 @@ main .row {
 }
 
 .item-btns i {
-  width: 2.5em;
-  height: 2.5em;
+  width: 2.1em;
+  height: 2.1em;
   border-radius: 50%;
   text-align: center;
-  line-height: 2.4em;
+  line-height: 2.2em;
 }
 
 .edit {
@@ -132,6 +158,8 @@ main .row {
           flex: 0 0 40%;
   height: 207px;
   background-color: black;
+  border-radius: 0.3em;
+  overflow: hidden;
 }
 
 .movie-image img {
@@ -228,7 +256,7 @@ main .row {
 }
 
 .cta:hover {
-  background-color: #fff;
+  background-color: #f3f3f3;
   -webkit-box-shadow: 0 0.5em 0.8em -0.5em rgba(0, 0, 0, 0.3);
           box-shadow: 0 0.5em 0.8em -0.5em rgba(0, 0, 0, 0.3);
 }

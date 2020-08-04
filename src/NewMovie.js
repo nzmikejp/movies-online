@@ -18,7 +18,7 @@ class NewMovie extends Component {
                     <i className="fas fa-trash-alt trash" onClick={this.handleRemoveClick}></i>
                 </div>
                 <div className="movie-image">
-                    <img src="" alt=""/>
+                    <img src={this.props.image} alt=""/>
                 </div>
                 <div className="movie-content-wrap">
                     <h1 className="movie-title">
