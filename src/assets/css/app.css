@@ -45,8 +45,8 @@ header {
       -ms-flex-align: center;
           align-items: center;
   z-index: 50;
-  -webkit-box-shadow: 0 0.5em 0.5em rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0.5em 0.5em rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 -0.3em 0.9em 1em rgba(0, 0, 0, 0.3);
+          box-shadow: 0 -0.3em 0.9em 1em rgba(0, 0, 0, 0.3);
   position: relative;
 }
 
@@ -161,6 +161,7 @@ main .row {
   background-color: black;
   border-radius: 0.3em;
   overflow: hidden;
+  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255, 255, 255, 0.15)));
 }
 
 .movie-image img {
@@ -191,6 +192,7 @@ main .row {
 
 .sidebar {
   background-color: #44474e;
+  background-image: linear-gradient(-45deg, #383a41 0%, #282c34 100%);
   padding: 1.5em;
 }
 
