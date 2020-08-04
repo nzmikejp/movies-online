@@ -133,6 +133,7 @@ main .row {
   right: 0;
   -webkit-transform: translate(10%, -50%);
           transform: translate(10%, -50%);
+  cursor: pointer;
 }
 
 .item-btns i {
