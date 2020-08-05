@@ -64,7 +64,7 @@ class App extends Component {
           image: './images/largeposter-5.jpg'
         },
         {
-          id: 6,
+          id: 7,
           title: 'Follow Me',
           description: "A social media personality travels with his friends to Moscow to capture new content for his successful VLOG. Always pushing the limits and catering to a growing audience, they enter a cold world of mystery, excess, and danger. When the lines between real life and social media are blurred, the group must fight to escape, and survive.",
           release: '23/07/2020',

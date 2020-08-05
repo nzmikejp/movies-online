@@ -157,14 +157,14 @@ class NewMovie extends Component {
                     <h1 className="movie-title" onDoubleClick={this.handleTitleDoubleClick}>
                         {this.state.titleUpdating === true ? (
                             <div className="form-group">
-                                <input type="text" value={this.state.titleInput} onChange={this.handleTitleInputChange} onBlur={this.handleTitleInputBlur}/>
+                                <input type="text" autoFocus value={this.state.titleInput} onChange={this.handleTitleInputChange} onBlur={this.handleTitleInputBlur}/>
                             </div>
                         ) : this.props.title}
                     </h1>
                     <p className="movie-bio" onDoubleClick={this.handleDescriptionDoubleClick}>
                         {this.state.descriptionUpdating === true ? (
                             <div className="form-group">
-                                <textarea cols="30" rows="10" value={this.state.descriptionInput} onChange={this.handleDescriptionInputChange} onBlur={this.handleDescriptionInputBlur}></textarea>
+                                <textarea cols="30" rows="10" autoFocus value={this.state.descriptionInput} onChange={this.handleDescriptionInputChange} onBlur={this.handleDescriptionInputBlur}></textarea>
                             </div>
                         ) : this.props.description}
                     </p>
@@ -172,7 +172,7 @@ class NewMovie extends Component {
                         <span>Release Date: </span>
                         {this.state.releaseUpdating === true ? (
                             <div className="form-group">
-                                <input type="date" value={this.state.releaseInput} onChange={this.handleReleaseInputChange} onBlur={this.handleReleaseInputBlur}/>
+                                <input type="date" autoFocus value={this.state.releaseInput} onChange={this.handleReleaseInputChange} onBlur={this.handleReleaseInputBlur}/>
                             </div>
                         ) : this.props.release}   
                     </p>
@@ -180,7 +180,7 @@ class NewMovie extends Component {
                         <span>Run Time: </span>
                         {this.state.timeUpdating === true ? (
                             <div className="form-group">
-                                <input type="text" value={this.state.timeInput} onChange={this.handleTimeInputChange} onBlur={this.handleTimeInputBlur}/>
+                                <input type="text" autoFocus value={this.state.timeInput} onChange={this.handleTimeInputChange} onBlur={this.handleTimeInputBlur}/>
                             </div>
                         ) : this.props.time}
                     </p>
@@ -188,7 +188,7 @@ class NewMovie extends Component {
                         <span>Rating: </span>
                         {this.state.ratingUpdating === true ? (
                             <div className="form-group">
-                                <input type="text" value={this.state.ratingInput} onChange={this.handleRatingInputChange} onBlur={this.handleRatingInputBlur}/>
+                                <input type="text" autoFocus value={this.state.ratingInput} onChange={this.handleRatingInputChange} onBlur={this.handleRatingInputBlur}/>
                             </div>
                         ) : this.props.rating}
                     </p>
