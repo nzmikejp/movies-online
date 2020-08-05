@@ -100,6 +100,17 @@ class App extends Component {
     })
   }
 
+  updateMovie = (id, data) => {
+    var movies = this.state.movies
+    var updated = movies.map((item)=> {
+      return (item.id == id) ? {...item,...data} : item
+    })
+
+    this.setState({
+      movies: updated
+    })
+  }
+
   render(){
     return (
       <div className="wrap">
@@ -120,6 +131,7 @@ class App extends Component {
                       var props = {
                         key: movie.id,
                         removeMovie: this.removeMovie,
+                        updateMovie: this.updateMovie,
                         ...movie
                       }
                       return (
